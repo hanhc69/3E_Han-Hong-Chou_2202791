@@ -5,7 +5,8 @@ This assignment is a Python application modifies a specific input file(superstor
 ## Installation
 1. Use any python intepreter to run the program,Assignment 2.py (spyder is recommended)
 2. or https://github.com/hanhc69/3E_Han-Hong-Chou_2202791/blob/51af1c35fdf66d821fd79a9850919f8a54441b1b/Assignmet%202.py
-
+## Usage
+To  use the code, a file called 'superstore_sales.csv' is required.
 ## Instructions
 1. When running the program, an ouput 'clean_superstore_sales.csv' file will be created in the folder.
 2. Then, a line asking to start the program will appear
