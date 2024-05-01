@@ -19,6 +19,8 @@ This assignment is a Python application modifies a specific input file(superstor
 10. If 'U' is entered, the user is prompted to enter the row, column they want to change and the value to change it to. After all are entered, the value in the dateframe will change.
 11.  If 'D' is entered, it will display the current dataframe.
 12.  If 'SS' is entered, it will display the summary of the dataframe.
-13.  If 'AR' is entered, it will display the analysis result of the dataframe which are 4 graphs. It will show  
+13.  If 'AR' is entered, it will display the analysis result of the dataframe which are 4 graphs,Percentage of sales by each segment,Category sales per Year,Sales per Year in Monthly Increment and Sales per Month.
+14.  After each operation, the user is asked if they want to continue. If 'y' is entered, users will be asked to choose between the same operation or another operation.
+15.  The operation ends after 'n' is pressed.     
 
 
