@@ -26,6 +26,11 @@ To  use the code, a file called 'superstore_sales.csv' is required.
 14.  After each operation, the user is asked if they want to continue. If 'y' is entered, users will be asked to choose between the same operation or another operation.
 15.  The operation ends after 'n' is pressed when asked to continue.
 
+## Intepret Result
+1.	The majority of sales are from consumer with 52% of all sales.
+2.	Category sales has an increasing trend from 2014 to 2017 with office supplies sales drop between 2014 and 2015.
+3.	The sales have similar cycles each year with most sales happening at the end of the year.
+
 ## Known Errors
 1. The program may have some delay when some operation is used as main() function is called and contain for loop on top of apply() or applymap() which causes delay.
 2. For date format, if there are no proper separation,'/' between date,month and year. ValueError will occur.
