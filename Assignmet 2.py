@@ -317,6 +317,7 @@ class Transaction(System):
                 while self.Continue == 'y':
                     Operation = OperationDict[self.choice]
                     Operation()
+                    #ask user to continue or terminate program
                     self.ChoiceAndContinue()
                 self.Exit()
             else:
