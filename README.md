@@ -29,5 +29,5 @@ To  use the code, a file called 'superstore_sales.csv' is required.
 ## Known Errors
 1. The program may have some delay when some operation is used as main() function is called and contain for loop on top of apply() or applymap() which causes delay.
 2. For date format, if there are no proper separation,'/' between date,month and year. ValueError will occur.
-3. There are some errors that may occur if weird input is added, restarting the system is recommended.
+3. There are some errors that may occur if unaccounted input is added, restarting the system is recommended.
 
