@@ -214,7 +214,10 @@ class Transaction(System):
     # Remove a row from dataframe
     def Remove(self):
         RemoveChoice = int(input('Choose the Row ID of the row you want to remove:'))
-        self.df.drop(index = RemoveChoice, inplace = True)
+        self.df.drop(index = RemoveChoice,inplace = True)
+        self.df = self.df.reset_index(drop = True)
+        self.df.index = self.df.index + 1
+        self.df.index.name = 'Row ID'
 
     # Update Transaction value
     def UpdateTransaction(self):
@@ -267,7 +270,6 @@ class Transaction(System):
                      '11' : 'Nov',
                      '12' : 'Dec'
                      }
-        #############################################
         SegmentCount  = self.df['Segment'].value_counts()
         df = self.df.copy()
         df['Order Year'] = self.df['Order Date'].apply(lambda x: x.split('/')[2])
