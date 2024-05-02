@@ -65,6 +65,7 @@ def main(df):
     df[['Order Date','Ship Date']] = df[['Order Date','Ship Date']].applymap(formatDate)
 
     OrderDate = list(df['Order Date'].copy().apply(lambda x: x.split('/')[2]).drop_duplicates())
+    
     # reseting the index for function CheckOrderDate
     df = df.reset_index(drop=True)
     df.index = df.index + 1
@@ -270,6 +271,7 @@ class Transaction(System):
                      '11' : 'Nov',
                      '12' : 'Dec'
                      }
+        
         SegmentCount  = self.df['Segment'].value_counts()
         df = self.df.copy()
         df['Order Year'] = self.df['Order Date'].apply(lambda x: x.split('/')[2])
@@ -328,7 +330,7 @@ class Transaction(System):
 
 df = pd.read_csv('superstore_sales.csv', index_col = 'Row ID')
 # remove duplicate and empty element
-df = df.dropna()
+df = df[(df[['Order ID','Product ID', 'Sales']].fillna('No input') != 'No input').all(axis = 1)]
 df = df.drop_duplicates()
 
 # set index for CheckOrderDate
@@ -339,6 +341,7 @@ df = main(df)
 
 # remove duplicates
 df = RemoveDuplicate(df)
+
 try:
     df.to_csv('clean_superstore_sales.csv')
 except PermissionError: 
@@ -359,6 +362,7 @@ if System.start == 'y':
 else:
     #System ends
     System.Exit()
+
 
 
 
